@@ -10,9 +10,8 @@ const {
 const Blog = require("./models/blog");
 
 const app = express();
-const port = 8000;
 
-connectToDB("mongodb://127.0.0.1:27017/blogify")
+connectToDB(process.env.MONGO_URL)
     .then(() => console.log("Mongo DB connected"))
     .catch((err) =>
         console.log(`Error occured while connecting to DB: ${err}`)
@@ -38,4 +37,6 @@ app.get("/", async (req, res) => {
     });
 });
 
-app.listen(port, () => console.log(`Server started at port: ${port}`));
+app.listen(process.env.PORT, () =>
+    console.log(`Server started at port: ${process.env.PORT}`)
+);

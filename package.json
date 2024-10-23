@@ -1,23 +1,24 @@
 {
-  "name": "blogging-app",
-  "version": "1.0.0",
-  "description": "This is the backend for a blogging application built with Node.js, Express, and MongoDB. The API serves as the foundation for a fully-featured blogging platform, allowing users to create, read, update, and delete blog posts. It also includes user authentication and authorization, enabling a secure environment for users to manage their content.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch index"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cookie-parser": "^1.4.7",
-    "ejs": "^3.1.10",
-    "express": "^4.21.1",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.7.2"
-  },
-  "devDependencies": {
-    "multer": "^1.4.5-lts.1"
-  }
+    "name": "blogging-app",
+    "version": "1.0.0",
+    "description": "This is the backend for a blogging application built with Node.js, Express, and MongoDB. The API serves as the foundation for a fully-featured blogging platform, allowing users to create, read, update, and delete blog posts. It also includes user authentication and authorization, enabling a secure environment for users to manage their content.",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js",
+        "start:dev": "node --watch --env-file=.env app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cookie-parser": "^1.4.7",
+        "ejs": "^3.1.10",
+        "express": "^4.21.1",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.7.2"
+    },
+    "devDependencies": {
+        "multer": "^1.4.5-lts.1"
+    }
 }
