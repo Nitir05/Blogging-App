@@ -4,12 +4,19 @@
 <head>
   <%- include('./partials/head') %>
     <title>Home</title>
+    <style>
+      .blogs--container {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+    </style>
 </head>
 
 <body>
   <%- include('./partials/nav') %>
-    <div class="container mt-3">
-      <% locals.blogs.forEach(blog=> { %>
+    <div class="container mt-3 blogs--container">
+      <% blogs.forEach(blog=> { %>
         <div class="card" style="width: 18rem;">
           <img src=<%=blog.coverImageURL %> class="card-img-top" alt="Cover image">
           <div class="card-body">
